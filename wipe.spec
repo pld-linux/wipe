@@ -6,6 +6,7 @@ Release:	3
 License:	GPL
 Group:		Applications/File
 Source0:	http://gsu.linux.org.tr/wipe/%{name}-%{version}.tar.gz
+# Source0-md5:	03801d2c129176cc8c8ff4e750c80805
 URL:		http://gsu.linux.org.tr/wipe/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
