@@ -1,5 +1,8 @@
 # $Log: wipe.spec,v $
-# Revision 1.1  1999-12-07 09:09:42  kravietz
+# Revision 1.2  1999-12-07 09:20:02  kravietz
+# - spec fixes
+#
+# Revision 1.1  1999/12/07 09:09:42  kravietz
 # - created wipe spec
 # 9958639531e1a0c42b11832b4c43fac9  wipe.spec
 #
@@ -42,16 +45,17 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}}
 
 install -m 711 -s wipe $RPM_BUILD_ROOT%{_bindir}
-install -m 644 wipe.1.bz2 $RPM_BUILD_ROOT%{_mandir}/man1
+cp -prf wipe.1 $RPM_BUILD_ROOT%{_mandir}/man1
 
-bzip2 -9nf $RPM_BUILD_ROOT%{_mandir}/man1/*
+bzip2 -9f $RPM_BUILD_ROOT%{_mandir}/man1/*
+bzip2 -9f BUGS CHANGES README secure_del.html
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc BUGS CHANGES README secure_del.html
+%doc BUGS.bz2 CHANGES.bz2 README.bz2 secure_del.html.bz2
 
 %attr(711,root,root) %{_bindir}/wipe
 %{_mandir}/man1/*
