@@ -2,7 +2,7 @@ Summary:	Cryptographically secure file wiping utility
 Summary(pl):	Narzêdzie do kryptograficznie bezpiecznego kasowania plików
 Name:		wipe
 Version:	0.16
-Release:	2
+Release:	3
 License:	GPL
 Group:		Applications/File
 Group(de):	Applikationen/Datei
