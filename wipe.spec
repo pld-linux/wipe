@@ -2,10 +2,11 @@ Summary:	Cryptographically secure file wiping utility
 Summary(pl):	Narzêdzie do kryptograficznie bezpiecznego kasowania plików
 Name:		wipe
 Version:	0.16
-Release:	1
+Release:	2
 License:	GPL
-Group:		Utilities/File
-Group(pl):	Narzêdzia/Pliki
+Group:		Applications/File
+Group(de):	Applikationen/Datei
+Group(pl):	Aplikacje/Pliki
 Source0:	http://gsu.linux.org.tr/wipe/%{name}-%{version}.tar.gz
 URL:		http://gsu.linux.org.tr/wipe/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -37,11 +38,10 @@ z których 8 jest losowych.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 
-install -s wipe $RPM_BUILD_ROOT%{_bindir}
+install wipe $RPM_BUILD_ROOT%{_bindir}
 install wipe.1 $RPM_BUILD_ROOT%{_mandir}/man1
 
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* \
-	BUGS CHANGES README secure_del.html
+gzip -9nf BUGS CHANGES README secure_del.html
 
 %clean
 rm -rf $RPM_BUILD_ROOT
