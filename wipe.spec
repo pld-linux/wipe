@@ -5,8 +5,6 @@ Version:	0.16
 Release:	3
 License:	GPL
 Group:		Applications/File
-Group(de):	Applikationen/Datei
-Group(pl):	Aplikacje/Pliki
 Source0:	http://gsu.linux.org.tr/wipe/%{name}-%{version}.tar.gz
 URL:		http://gsu.linux.org.tr/wipe/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
