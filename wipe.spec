@@ -1,14 +1,14 @@
 Summary:	Cryptographically secure file wiping utility
 Summary(pl):	Narzêdzie do kryptograficznie bezpiecznego kasowania plików
 Name:		wipe
-Version:	0.16
-Release:	4
+Version:	0.20
+Release:	1
 License:	GPL
 Group:		Applications/File
-Source0:	http://gsu.linux.org.tr/wipe/%{name}-%{version}.tar.gz
-# Source0-md5:	03801d2c129176cc8c8ff4e750c80805
+Source0:	http://abaababa.ouvaton.org/wipe/%{name}-%{version}.tar.gz
+# Source0-md5:	dbf3027f46d014dc899a1cdf2ed93d00
 Patch0:		%{name}-Makefile.patch
-URL:		http://gsu.linux.org.tr/wipe/
+URL:		http://abaababa.ouvaton.org/wipe/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
