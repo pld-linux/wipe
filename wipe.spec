@@ -1,22 +1,11 @@
-# $Log: wipe.spec,v $
-# Revision 1.3  1999-12-07 09:27:06  kravietz
-# - more minor fixes
-#
-# Revision 1.2  1999/12/07 09:20:02  kravietz
-# - spec fixes
-#
-# Revision 1.1  1999/12/07 09:09:42  kravietz
-# - created wipe spec
-# 9958639531e1a0c42b11832b4c43fac9  wipe.spec
-#
 Summary:	Cryptographically secure file wiping utility
 Summary(pl):	Narzêdzie do kryptograficznie bezpiecznego kasowania plików
 Name:		wipe
 Version:	0.15
 Release:	1
-Copyright:	GPL
-Group:		X11/Utilities
-Group(pl):	X11/Narzêdzia
+License:	GPL
+Group:		Utilities/File
+Group(pl):	Narzêdzia/Pliki
 Source:		http://gsu.linux.org.tr/wipe/%{name}-%{version}.tar.gz
 URL:		http://gsu.linux.org.tr/wipe/
 BuildRoot:	/tmp/%{name}-%{version}-root
@@ -26,7 +15,7 @@ Wipe is a tool for cryptographically secure file deletion from magnetic
 media, to prevent using advanced recovery techniques like magnetic force
 microscopy (MFM). Wipe will repeadetly overwrites special patterns to
 the files to be  destroyed, using the fsync() call and/or the O_SYNC bit
-to force disk access. In normal mode, 34 patterns are used (of  which
+to force disk access. In normal mode, 34 patterns are used (of which
 8 are random).
 
 %description -l pl
@@ -47,18 +36,18 @@ make %{_os}
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 
-install -m 711 -s wipe $RPM_BUILD_ROOT%{_bindir}
-cp -prf wipe.1 $RPM_BUILD_ROOT%{_mandir}/man1
+install -s wipe $RPM_BUILD_ROOT%{_bindir}
+install wipe.1 $RPM_BUILD_ROOT%{_mandir}/man1
 
-bzip2 -9f $RPM_BUILD_ROOT%{_mandir}/man1/*
-bzip2 -9f BUGS CHANGES README secure_del.html
+gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* \
+	BUGS CHANGES README secure_del.html
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc BUGS.bz2 CHANGES.bz2 README.bz2 secure_del.html.bz2
+%doc *.gz
 
-%attr(711,root,root) %{_bindir}/wipe
+%attr(755,root,root) %{_bindir}/wipe
 %{_mandir}/man1/*
