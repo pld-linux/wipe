@@ -31,7 +31,7 @@ z których 8 jest losowych.
 %setup -q
 
 %build
-make %{_os}
+%{__make} %{_os}
 
 %install
 rm -rf $RPM_BUILD_ROOT
