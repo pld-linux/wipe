@@ -8,7 +8,7 @@ Group:		Utilities/File
 Group(pl):	Narzêdzia/Pliki
 Source:		http://gsu.linux.org.tr/wipe/%{name}-%{version}.tar.gz
 URL:		http://gsu.linux.org.tr/wipe/
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Wipe is a tool for cryptographically secure file deletion from magnetic
