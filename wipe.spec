@@ -1,5 +1,8 @@
 # $Log: wipe.spec,v $
-# Revision 1.2  1999-12-07 09:20:02  kravietz
+# Revision 1.3  1999-12-07 09:27:06  kravietz
+# - more minor fixes
+#
+# Revision 1.2  1999/12/07 09:20:02  kravietz
 # - spec fixes
 #
 # Revision 1.1  1999/12/07 09:09:42  kravietz
@@ -42,7 +45,7 @@ make %{_os}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 
 install -m 711 -s wipe $RPM_BUILD_ROOT%{_bindir}
 cp -prf wipe.1 $RPM_BUILD_ROOT%{_mandir}/man1
