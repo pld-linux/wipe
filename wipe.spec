@@ -1,5 +1,5 @@
 Summary:	Cryptographically secure file wiping utility
-Summary(pl):	Narzêdzie do kryptograficznie bezpiecznego kasowania plików
+Summary(pl.UTF-8):   NarzÄ™dzie do kryptograficznie bezpiecznego kasowania plikÃ³w
 Name:		wipe
 Version:	0.20
 Release:	2
@@ -19,14 +19,14 @@ special patterns to the files to be destroyed, using the fsync() call
 and/or the O_SYNC bit to force disk access. In normal mode, 34
 patterns are used (of which 8 are random).
 
-%description -l pl
-Wipe jest narzêdziem, s³u¿±cym do kryptograficznie bezpiecznego
-kasowania plików z no¶ników magnetycznych tak, by uniemo¿liwiæ próby
+%description -l pl.UTF-8
+Wipe jest narzÄ™dziem, sÅ‚uÅ¼Ä…cym do kryptograficznie bezpiecznego
+kasowania plikÃ³w z noÅ›nikÃ³w magnetycznych tak, by uniemoÅ¼liwiÄ‡ prÃ³by
 ich odtworzenia przy pomocy zaawansowanych technik takich jak
 mikroskopia magnetyczna MFM. Wipe wielokrotnie nadpisuje dany plik
-specjalnymi maskami, u¿ywaj±c fsync() i/lub bitu O_SYNC dla
-zapewnienia dostêpu do dysku. W normalnym trybie wipe u¿ywa 34 masek,
-z których 8 jest losowych.
+specjalnymi maskami, uÅ¼ywajÄ…c fsync() i/lub bitu O_SYNC dla
+zapewnienia dostÄ™pu do dysku. W normalnym trybie wipe uÅ¼ywa 34 masek,
+z ktÃ³rych 8 jest losowych.
 
 %prep
 %setup -q
