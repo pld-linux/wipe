@@ -1,5 +1,5 @@
 Summary:	Cryptographically secure file wiping utility
-Summary(pl.UTF-8):   Narzędzie do kryptograficznie bezpiecznego kasowania plików
+Summary(pl.UTF-8):	Narzędzie do kryptograficznie bezpiecznego kasowania plików
 Name:		wipe
 Version:	0.20
 Release:	2
