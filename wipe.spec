@@ -2,8 +2,8 @@ Summary:	Cryptographically secure file wiping utility
 Summary(pl.UTF-8):	Narzędzie do kryptograficznie bezpiecznego kasowania plików
 Name:		wipe
 Version:	0.20
-Release:	2
-License:	GPL
+Release:	3
+License:	GPL v2
 Group:		Applications/File
 Source0:	http://abaababa.ouvaton.org/wipe/%{name}-%{version}.tar.gz
 # Source0-md5:	dbf3027f46d014dc899a1cdf2ed93d00
@@ -45,13 +45,11 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 install wipe $RPM_BUILD_ROOT%{_bindir}
 install wipe.1 $RPM_BUILD_ROOT%{_mandir}/man1
 
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
 %doc BUGS CHANGES README secure_del.html
-
 %attr(755,root,root) %{_bindir}/wipe
 %{_mandir}/man1/*
