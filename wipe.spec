@@ -2,12 +2,13 @@ Summary:	Cryptographically secure file wiping utility
 Summary(pl.UTF-8):	Narzędzie do kryptograficznie bezpiecznego kasowania plików
 Name:		wipe
 Version:	0.20
-Release:	4
+Release:	5
 License:	GPL v2
 Group:		Applications/File
 Source0:	http://abaababa.ouvaton.org/wipe/%{name}-%{version}.tar.gz
 # Source0-md5:	dbf3027f46d014dc899a1cdf2ed93d00
 Patch0:		%{name}-Makefile.patch
+Patch1:		%{name}-missing-includes.patch
 URL:		http://abaababa.ouvaton.org/wipe/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -31,6 +32,7 @@ z których 8 jest losowych.
 %prep
 %setup -q
 %patch -P0 -p1
+%patch -P1 -p1
 
 %build
 %{__make} \

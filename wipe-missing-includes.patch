@@ -1,0 +1,20 @@
+--- wipe-0.20/random.c.orig	2002-11-25 23:59:49.000000000 +0000
++++ wipe-0.20/random.c	2024-01-01 00:00:00.000000000 +0000
+@@ -53,6 +53,7 @@
+ #include "arcfour.h"
+ #include "md5.h"
+ #include "random.h"
++#include <string.h>
+
+ #ifdef RC6_ENABLED
+ static struct rc6_KeySchedule rand_rc6;
+--- wipe-0.20/arcfour.c.orig	2002-11-25 23:59:49.000000000 +0000
++++ wipe-0.20/arcfour.c	2024-01-01 00:00:00.000000000 +0000
+@@ -10,6 +10,7 @@
+  */
+
+ #include "arcfour.h"
++#include <string.h>
+
+ void arcfour_SetupKey (u8 *k, int n, struct arcfour_KeySchedule *ks)
+ {
